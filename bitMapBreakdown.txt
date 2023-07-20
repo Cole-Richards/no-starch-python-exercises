@@ -1,0 +1,13 @@
+message = input('> '): This line takes input from the user and assigns it to the variable message. The > is intended to serve as prompt to the user.
+
+if message == '': sys.exit(): If the message is an empty string (when the user enters nothing), the sys.exit() function is called, terminating the program.
+
+for line in bitmap.splitlines():: This loop iterates over each line in the bitmap variable. The splitlines() method is used to split the bitmap string into individual lines.
+
+for i, bit in enumerate(line):: This inner loop iterates over each character (bit) in the current line. The enumerate() function is used to get both the index i and the character bit from the line string.
+
+if bit == ' ': print(' ', end=''): If the character bit is a space, an empty space is printed (as there's a space in the bitmap).
+
+else: print(message[i % len(message)], end=''): If the character bit is not a space, it means that there's a character representation in the bitmap. The code then prints a character from the message string based on the index i. To avoid going out of bounds of the message string, the index i is wrapped using the modulo (%) operator with len(message) to ensure that it cycles through the message string.
+
+print(): After processing each line of the bitmap, a newline is printed to move to the next line in the output.
